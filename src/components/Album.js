@@ -36,9 +36,9 @@ class Album extends Component {
              {
                this.state.album.songs.map( (songs, index) =>
                  <tr key={index} >
-                   <td>{index}</td>
+                   <td>{index + 1}</td>
                    <td>{songs.title}</td>
-                   <td>{songs.duration}</td>
+                   <td>{songs.duration}<span class="icon ion-play"></span>Play<span class="icon ion-pause">Pause</span></td>
                 </tr>
                )
              }
