@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import albumData from './../data/albums';
 import PlayerBar from './PlayerBar';
+import './Album.css';
 
 class Album extends Component {
   constructor(props) {
@@ -135,7 +136,7 @@ class Album extends Component {
              <col id="song-title-column" />
              <col id="song-duration-column" />
            </colgroup>
-           <tbody>
+           <tbody className="song-list">
            {this.state.album.songs.map((song, index) =>
                 <tr className="song" key={index} onClick={() => this.handleSongClick(song)}
                   onMouseEnter={() => this.setState({isHovered: index+1})}

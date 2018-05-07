@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './PlayerBar.css';
 
  class PlayerBar extends Component {
    render() {
@@ -23,7 +24,7 @@ import React, { Component } from 'react';
              value={this.props.seekValue || 0}
              max="1"
              min="0"
-             step="0.01"
+             step="0.001"
              onChange={this.props.handleTimeChange}
            />
            <div className="total-time">{this.props.duration}</div>

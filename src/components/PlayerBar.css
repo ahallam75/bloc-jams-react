@@ -1,0 +1,33 @@
+.ion-btn {
+  border: none;
+  background-color: none;
+  font-size: 2.5rem;
+  color: rgba(65, 153, 153, 0.8);
+}
+
+.seek-bar {
+  appearance: none;
+  width: 20%;
+  height: 1rem;
+  background: rgba(46, 19, 46, 0.65);
+  margin: .5rem 0;
+}
+
+.seek-bar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 100%;
+  background: black;
+}
+
+#play-pause {
+  margin: 5px;
+}
+
+.icon ion-volume-high {
+  padding-bottom: 10px;
+  color: green;
+}

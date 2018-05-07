@@ -1,0 +1,44 @@
+.album {
+  background-color: #e6e6e6;
+}
+
+#album-cover-art {
+  height: 300px;
+  padding-top: 50px;
+}
+
+#album-info {
+  color: black;
+  padding-bottom: 5px;
+}
+
+table {
+  border: solid 1px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 5px;
+}
+
+#song-action-btns {
+  color: red;
+  border: none;
+  background: none;
+}
+
+.ion-pause, .ion-play, .song-number {
+  border: none;
+  background: none;
+  font-size: 1.75rem;
+  color: red;
+}
+
+#album-title {
+  font-size: 3rem;
+}
+
+tr:hover {
+  cursor: pointer;
+  background-color: grey;
+}
