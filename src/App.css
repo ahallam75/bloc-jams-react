@@ -14,6 +14,12 @@
   color: white;
 }
 
+header {
+  background-color: #a6a6a6;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
 .App-title {
   font-size: 1.5em;
 }
@@ -25,4 +31,20 @@
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+#title {
+  color: red;
+  font-family: fantasy;
+  font-size: 5rem;
+}
+
+#Landing-link {
+  padding-right: 10px;
+  color: blue;
+}
+
+#Library-link {
+  padding-left: 10px;
+  color: blue;
 }

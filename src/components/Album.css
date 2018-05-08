@@ -1,5 +1,5 @@
 .album {
-  background-color: #e6e6e6;
+  background-color: #cccccc;
 }
 
 #album-cover-art {
@@ -9,16 +9,27 @@
 
 #album-info {
   color: black;
+  padding-top: 0;
   padding-bottom: 5px;
 }
 
+#album-title {
+  margin-bottom: 0;
+}
+
 table {
+  width: 250px;
   border: solid 1px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 5px;
   margin-bottom: 5px;
   padding: 5px;
+}
+
+.song-list {
+  text-align: left;
+  padding-right: 20px;
 }
 
 #song-action-btns {
