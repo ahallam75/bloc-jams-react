@@ -1,0 +1,15 @@
+.library {
+  background-color: #cccccc;
+  padding-bottom: 100%;
+}
+
+.Link {
+  color: black;
+
+}
+
+.albumcover {
+  height: 100px;
+  padding-top: 30px;
+  padding-bottom: 10px;
+}

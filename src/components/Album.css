@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .album-info {
   padding-bottom: 14rem;
 }
@@ -45,12 +46,67 @@
 
 tr {
   border-top: .25rem solid rgba(230, 174, 47, .5);
+=======
+.album {
+  background-color: #cccccc;
+}
+
+#album-cover-art {
+  height: 300px;
+  padding-top: 50px;
+}
+
+#album-info {
+  color: black;
+  padding-top: 0;
+  padding-bottom: 5px;
+}
+
+#album-title {
+  margin-bottom: 0;
+}
+
+table {
+  width: 250px;
+  border: solid 1px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 5px;
+}
+
+.song-list {
+  text-align: left;
+  padding-right: 20px;
+}
+
+#song-action-btns {
+  color: red;
+  border: none;
+  background: none;
+}
+
+.ion-pause, .ion-play, .song-number {
+  border: none;
+  background: none;
+  font-size: 1.75rem;
+  color: red;
+}
+
+#album-title {
+  font-size: 3rem;
+>>>>>>> assignment-bloc-jams-styling
 }
 
 tr:hover {
   cursor: pointer;
+<<<<<<< HEAD
 }
 
 .table > tbody > tr > td {
   vertical-align: middle;
+=======
+  background-color: grey;
+>>>>>>> assignment-bloc-jams-styling
 }

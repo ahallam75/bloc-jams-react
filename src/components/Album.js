@@ -17,12 +17,13 @@ class Album extends Component {
        currentTime: 0,
        duration: album.songs[0].duration,
        isPlaying: false,
-       currentVolume: .5 //I added this.
+       currentVolume: .5,
+       isHovered: false
      };
 
      this.audioElement = document.createElement('audio');
      this.audioElement.src = album.songs[0].audioSrc;
-     this.audioElement.volume = this.state.currentVolume; //I added this.
+     this.audioElement.volume = this.state.currentVolume;
    }
 
    play() {
@@ -112,13 +113,13 @@ class Album extends Component {
      this.setState({ currentTime: newTime });
     }
 
-     handleVolumeChange(e) {  // I added 93-97
+     handleVolumeChange(e) {
      const newVolume = e.target.value;
      this.audioElement.volume = newVolume;
      this.setState({ currentVolume: newVolume });
     }
 
-   render() {
+    render() {
      return (
        <section className="album">
          <section id="album-info">
@@ -135,20 +136,27 @@ class Album extends Component {
              <col id="song-title-column" />
              <col id="song-duration-column" />
            </colgroup>
-           <tbody>
-             {this.state.album.songs.map( (song, index) =>
-               <tr className="song" key={index} onClick={() => this.handleSongClick(song)} >
-                 <td className="song-actions">
-                   <button>
-                     <span className="song-number">{index+1}</span>
-                     <span className="ion-play"></span>
-                     <span className="ion-pause"></span>
-                   </button>
-                 </td>
-                 <td className="song-title">{song.title}</td>
-                 <td className="song-duration">{this.formatTime(song.duration)}</td>
-               </tr>
-             )}
+           <tbody className="song-list">
+           {this.state.album.songs.map((song, index) =>
+                <tr className="song" key={index} onClick={() => this.handleSongClick(song)}
+                  onMouseEnter={() => this.setState({isHovered: index+1})}
+                  onMouseLeave={() => this.setState({isHovered: false})}>
+                  <td className="song-actions">
+                    <button id="song-action-btns">
+                    { (this.state.currentSong.title === song.title) ?
+                      <span className={this.state.isPlaying ? "ion-pause" : "ion-play"}></span>
+                      :
+                      (this.state.isHovered === index+1) ?
+                      <span className="ion-play"></span>
+                      :
+                      <span className="song-number">{index+1}</span>
+                    }
+                    </button>
+                  </td>
+                  <td className="song-title">{song.title}</td>
+                  <td className="song-duration">{this.formatTime(song.duration)}</td>
+                </tr>
+              )}
            </tbody>
          </table>
          <PlayerBar
